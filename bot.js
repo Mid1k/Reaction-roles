@@ -13,8 +13,7 @@ bot.on('ready', () => {
     const channelID = "ID Канала, где сообщение с реакциями.",
        messageID = "ID Сообщение, какое думаю и так понятно.";
     
-    // Внимание, данное действие нужно выполнять в ready ивенте. Тобишь тогда, когда бот запустится.
-    bot.channels.cache.get(channelID).messages.fetch(messageID); // Добавляем сообщение в коллекцию.
+    bot.channels.cache.get(channelID).messages.fetch(messageID);
     
     bot.on("messageReactionAdd", (r, user) => {
       if (user.bot || r.message.id != messageID || (!(r.emoji.id in colors) && !(r.emoji.name in colors))) return; 
@@ -27,4 +26,4 @@ bot.on('ready', () => {
     });
     })
 
-bot.login(process.env.BOT_TOKEN);
+bot.login('token');
