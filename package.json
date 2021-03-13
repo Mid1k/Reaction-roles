@@ -1,0 +1,15 @@
+{
+  "name": "reactbot",
+  "version": "1.0.0",
+  "description": "reaction bot",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mid#0001",
+  "license": "ISC"
+}
