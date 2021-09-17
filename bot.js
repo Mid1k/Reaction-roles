@@ -1,11 +1,4 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
-
-bot.on('ready', () => {
-        console.log('Запустился бот ' + bot.user.tag);
-    })
-
-    const colors = {
+const colors = {
       "ID Эмоджи": "ID Роли",
       "ID Эмодзи 2": "ID Роли 2", // И так далее.
     };
@@ -25,5 +18,3 @@ bot.on('ready', () => {
       r.message.guild.member(user.id).roles.remove(colors[(r.emoji.id in colors) ? r.emoji.id : r.emoji.name]);
     });
     })
-
-bot.login('token');
